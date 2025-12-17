@@ -78,12 +78,36 @@ function verificaPalpite() {
     .toLowerCase();
 
   const mensagem = document.getElementById("mensagem");
+  const botao = document.getElementById("mensagem");
 
   if (palpite === "") {
     mensagem.textContent = "Digite algo primeiro 😊";
     return;
   }
 
+  // 🔒 DESATIVA O BOTÃO POR 3 SEGUNDOS
+  botao.disabled = true;
+  botao.style.backgroundColor = "#ccc";
+  botao.style.cursor = "not-allowed";
+
+  let tempo = 3;
+  const textoOriginal = botao.textContent;
+  botao.textContent = `Aguarde ${tempo}s`;
+
+  const intervalo = setInterval(() => {
+    tempo--;
+    botao.textContent = `Aguarde ${tempo}s`;
+
+    if (tempo === 0) {
+      clearInterval(intervalo);
+      botao.disabled = false;
+      botao.style.backgroundColor = "";
+      botao.style.cursor = "pointer";
+      botao.textContent = textoOriginal;
+    }
+  }, 1000);
+
+  // ✅ VERIFICA PALPITE
   if (palpite === respostaCorreta) {
     mensagem.textContent = "🎉 Você acertou! Essa é a surpresa!";
     mensagem.style.color = "#000";
@@ -121,3 +145,4 @@ function soltarConfetes() {
     }, 3000);
   }
 }
+
