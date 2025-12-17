@@ -1,0 +1,30 @@
+.tentativa {
+  margin-top: 20px;
+}
+
+.tentativa input {
+  padding: 10px;
+  width: 100%;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.tentativa button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #ffd700;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#mensagem {
+  margin-top: 10px;
+}
+
+#imagemPresente img {
+  margin-top: 15px;
+  width: 100%;
+  border-radius: 10px;
+}

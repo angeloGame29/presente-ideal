@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contagem Regressiva</title>
+  <link rel="stylesheet" href="src/style/styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Algo especial está chegando daqui a...</h1>
+
+    <div id="cronometro">
+      <span id="dias">0</span>d
+      <span id="horas">0</span>h
+      <span id="minutos">0</span>m
+      <span id="segundos">0</span>s
+    </div>
+
+    <div id="pista" class="pista"></div>
+    <div class="tentativa">
+        <input type="text" id="palpite" placeholder="Digite o que você suspeita que é...">
+        <button onclick="verificaPalpite()" id="mensagem">Confirmar</button>
+        <p id="mensagem"></p>
+    </div>
+
+    <div id="imagemPresente" class="escondido">
+        <img src="src/imgs/presente.png" alt="Presente">
+    </div>
+
+    <div id="surpresa" class="surpresa escondido">
+      🎉 SURPRESA! 🎁  
+      <p>Ela finalmente foi revelada!</p>
+    </div>
+  </div>
+
+  <div id="confetes"></div>
+
+  <script src="src/scripts/script.js"></script>
+</body>
+</html>
